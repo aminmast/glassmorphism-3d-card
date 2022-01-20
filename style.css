@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+.all-body{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+
+.all-body img {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* filter: blur(2px); */
+}
+
+div.card{
+    position: relative;
+    width: 300px;
+    height: 70vh;
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    z-index: 10;
+    margin: auto;
+    top: 15%;
+    box-shadow: 0 0 6px 4px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+.card-text {
+    transform: translateZ(30px);
+  }
+
+.js-tilt-glare {
+    border-radius: 10px;
+}
+
+.card-image {
+    position: relative;
+    width: 100%;
+    height: 60%;
+}
+
+.card-image .circle {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border:10px solid #80aa34;
+    transform: translateX(50%);
+    right: 50%;
+    margin-top: 50px;
+    transition: 0.3s;
+}
+
+.card-image img {
+    position: relative;
+    width: 130%;
+    z-index: 5;
+    transform: rotateY(180deg) rotateZ(-20deg) translate(100px,-40px);
+    transition: 0.3s;
+}
+
+.card-footer {
+    width: 100%;
+    height: 40%;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-footer h1 {
+    position: relative;
+    margin-top: 50px;
+    text-shadow: 0 0 5px rgba(255,255,255,0.5);
+    transition: 0.3s;
+}
+
+.card-footer .btn-buy {
+    width: 80%;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    background-image: linear-gradient(45deg, #4b6d30 , #80b043);
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.card-footer .btn-buy:hover {
+    box-shadow: 0 6px 4px rgba(0,0,0,0.3);
+    transform: scale(1.1);
+}
+
+.card:hover .card-image .circle{
+    width: 100%;
+    height: 100%;
+    background-color: #80aa34;
+    border: none;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.card:hover .card-image img {
+    width: 80%;
+    transform: rotateZ(0) rotateY(180deg);
+}
+
+.card:hover .card-footer h1 {
+    color: #fff;
+    margin: 0;
+    font-size: 50px;
+    top: -30px;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
